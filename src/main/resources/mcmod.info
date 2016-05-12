@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "modid": "ah",
+  "name": "Animal Husbandry",
+  "description": "ANimal Husbandy for Minecraft 1.9",
+  "version": "0.001",
+  "mcversion": "1.9.0",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Mowmaster"],
+  "credits": "The Forge and FML guys, along with the Love Clan and, yeah...",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

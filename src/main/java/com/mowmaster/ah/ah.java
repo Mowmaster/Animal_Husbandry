@@ -1,19 +1,19 @@
 package com.mowmaster.ah;
 
 import com.mowmaster.ah.events.ModEvents;
+import com.mowmaster.ah.item.ItemReg;
+import com.mowmaster.ah.item.ItemRendReg;
 import com.mowmaster.ah.proxies.CommonProxy;
 import com.mowmaster.ah.reference.reference;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = reference.MOD_ID, name = reference.Mod_NAME, version = reference.VERSION)
+@Mod(modid = reference.MOD_ID, name = reference.MOD_NAME, version = reference.VERSION)
 public class ah
 {
     @Mod.Instance(reference.MOD_ID)
@@ -38,11 +38,16 @@ public class ah
         //config = new Configuration(event.getSuggestedConfigurationFile());
         //configFile.syncConfig();
 
+        ItemReg.regEggs();
+
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+
+        ItemRendReg.registerItemRenderer();
+
         ModEvents handler = new ModEvents();
         MinecraftForge.EVENT_BUS.register(handler);
     }

@@ -1,0 +1,12 @@
+
+itemGroup.tabEggs= Eggs!
+
+item.egg_emerald.name=Emerald Egg
+item.egg_diamond.name=Diamond Egg
+item.egg_gold.name=Golden Egg
+item.egg_iron.name=Iron Egg
+item.egg_coal.name=Coal Egg
+item.egg_redstone.name=Charged Egg
+item.egg_lapis.name=Lapis Egg
+item.egg_glowstone.name=Glowing Egg
+item.egg_quartz.name=Quartz Egg

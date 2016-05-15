@@ -1,7 +1,7 @@
 {
   "parent": "builtin/generated",
   "textures": {
-    "layer0": "ah:items/egg_emerald"
+    "layer0": "ah:items/egg_default"
   },
   "display": {
     "thirdperson": {

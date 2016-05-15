@@ -19,6 +19,9 @@ public final class ItemRendReg
         reg(ItemReg.egg_lapis);
         reg(ItemReg.egg_glowstone);
         reg(ItemReg.egg_quartz);
+        reg(ItemReg.egg_default);
+
+
 
     }
 

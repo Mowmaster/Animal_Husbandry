@@ -15,6 +15,7 @@ public final class ItemReg
     public static Item egg_redstone;
     public static Item egg_glowstone;
     public static Item egg_quartz;
+    public static Item egg_default;
 
 
     public static void regEggs()
@@ -28,5 +29,6 @@ public final class ItemReg
         GameRegistry.register(egg_lapis = new ahEggs("egg_lapis").setRegistryName("egg_lapis"));
         GameRegistry.register(egg_glowstone = new ahEggs("egg_glowstone").setRegistryName("egg_glowstone"));
         GameRegistry.register(egg_quartz = new ahEggs("egg_quartz").setRegistryName("egg_quartz"));
+        GameRegistry.register(egg_default = new ahEggs("egg_default").setRegistryName("egg_default"));
     }
 }

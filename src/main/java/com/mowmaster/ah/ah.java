@@ -1,6 +1,7 @@
 package com.mowmaster.ah;
 
 import com.mowmaster.ah.chickens.DefaultChickenRender;
+import com.mowmaster.ah.chickens.ahChickenRegister;
 import com.mowmaster.ah.chickens.ahEntityChicken;
 import com.mowmaster.ah.events.ModEvents;
 import com.mowmaster.ah.item.ItemReg;
@@ -47,11 +48,7 @@ public class ah
         //configFile.syncConfig();
 
         ItemReg.regEggs();
-
-        RenderingRegistry.registerEntityRenderingHandler(ahEntityChicken.class, new DefaultChickenRender());
-        EntityRegistry.registerModEntity(ahEntityChicken.class,"chicken_default",1,reference.MOD_ID,30,20,true);
-        EntityRegistry.registerEgg (ahEntityChicken.class,0xFFFFFF, 0xFFFFFF );
-        EntityRegistry.addSpawn(ahEntityChicken.class,100,50,100, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(BiomeDictionary.Type.PLAINS));
+        ahChickenRegister.regChickens();
 
     }
 

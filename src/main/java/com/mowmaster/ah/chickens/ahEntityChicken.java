@@ -43,7 +43,7 @@ public class ahEntityChicken extends EntityChicken
     {
         super(worldIn);
         this.setSize(0.4F, 0.7F);
-        this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000; // Time In ticks??? 6000 = 5minutes
+        this.timeUntilNextEgg = this.rand.nextInt(10000) + 10000; // Time In ticks??? 6000 = 5minutes
         this.setPathPriority(PathNodeType.WATER, 0.0F);
     }
     @Override
@@ -78,7 +78,7 @@ public class ahEntityChicken extends EntityChicken
     @Override
     public void onLivingUpdate()
     {
-        super.onLivingUpdate();
+      super.onLivingUpdate();
         this.field_70888_h = this.wingRotation;
         this.field_70884_g = this.destPos;
         this.destPos = (float)((double)this.destPos + (double)(this.onGround ? -1 : 4) * 0.3D);
@@ -103,7 +103,7 @@ public class ahEntityChicken extends EntityChicken
             this.playSound(SoundEvents.entity_chicken_egg, 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
             // drop item was Items.egg but changed to our default type - for now
             this.dropItem(egg_default, 1);
-            this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
+            this.timeUntilNextEgg = this.rand.nextInt(10000) + 10000;
         }
     }
     @Override
@@ -136,9 +136,10 @@ public class ahEntityChicken extends EntityChicken
         return LootTableList.ENTITIES_CHICKEN;
     }
     @Override
+    //Takes Care of baby chickens???
     public EntityChicken createChild(EntityAgeable ageable)
     {
-        return new EntityChicken(this.worldObj);
+        return new ahEntityChicken(this.worldObj);
     }
 
     /**

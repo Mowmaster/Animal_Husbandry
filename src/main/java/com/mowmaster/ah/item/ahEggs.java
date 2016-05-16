@@ -21,7 +21,7 @@ public class ahEggs extends ItemAH
     {
         super(unloc);
 
-        this.maxStackSize = 16;
+        this.maxStackSize = 128;
         this.setCreativeTab(ahCreativeTab.tabEggs);
 
     }
